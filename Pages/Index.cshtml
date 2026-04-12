@@ -1,0 +1,48 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="sticky- d-flex gap-3 mb-3">
+    <button class="btn btn-primary">
+        Block
+    </button>
+    <button class="btn btn-primary">
+        <i class="fas fa-unlock"></i>
+    </button>
+    <button class="btn btn-danger">
+        <i class="fas fa-trash-can"></i>
+    </button>
+    <button class="btn btn-danger">
+        <i class="fas fa-ban"></i>
+    </button>
+</div>
+
+
+<div class="table-responsive">
+    <table class="table">
+        <thead class="table-light sticky-top">
+            <tr>
+                <th>
+                    <input type="checkbox" />
+                </th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Last Seen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" />
+                </td>
+                <td>Jane Doe</td>
+                <td>jane.doe@email.com</td>
+                <td>Active</td>
+                <td>today</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

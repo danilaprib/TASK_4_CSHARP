@@ -1,0 +1,29 @@
+﻿@page
+@model TASK_4_CSHARP.Pages.LoginModel
+@{
+	ViewData["Title"] = "Login page";
+}
+
+
+
+<div>
+    <form class="gap-3 d-flex flex-column">
+        <h1>Sign In</h1>
+        <div class="form-group">
+            <label formaction="emailInput">Email</label>
+            <input id="emailInput" class="form-control" type="email" placeholder="john.doe@email.com"/>
+        </div>
+        <div class="form-group">
+            <label for="passwordInput">Password</label>
+            <input id="passwordInput" class="form-control" type="password" placeholder="Your Password" />
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+        <span>
+            Dont have an account? 
+            <a asp-page="SignUp">Sign Up</a>
+        </span>
+        <span>
+            Forgot Password?
+        </span>
+    </form>
+</div>
