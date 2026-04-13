@@ -12,14 +12,12 @@ namespace TASK_4_CSHARP
             // Add services to the container.
             builder.Services.AddRazorPages();
 
+            builder.Services.AddDbContext<TaskFourContext>(opt =>
+                opt.UseNpgsql(builder.Configuration.GetConnectionString("TaskFourDbConnection")));
+
             var app = builder.Build();
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var context = scope.ServiceProvider.GetRequiredService<TaskFourContext>();
 
-                context.Database.Migrate();
-            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
