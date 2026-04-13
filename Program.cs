@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using TASK_4_CSHARP.Data;
+
 namespace TASK_4_CSHARP
 {
     public static class Program
@@ -10,6 +13,13 @@ namespace TASK_4_CSHARP
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<TaskFourContext>();
+
+                context.Database.Migrate();
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
