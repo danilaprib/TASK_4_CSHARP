@@ -194,3 +194,4 @@ C:\Users\danii\Desktop\ITransition_COURSE\task_4\TASK_4_CSHARP\bin\Debug\net9.0\
 C:\Users\danii\Desktop\ITransition_COURSE\task_4\TASK_4_CSHARP\obj\Debug\net9.0\TASK_4_CSHARP.csproj.AssemblyReference.cache
 C:\Users\danii\Desktop\ITransition_COURSE\task_4\TASK_4_CSHARP\obj\Debug\net9.0\TASK_4_C.76DE4F7F.Up2Date
 C:\Users\danii\Desktop\ITransition_COURSE\task_4\TASK_4_CSHARP\obj\Debug\net9.0\TASK_4_CSHARP.sourcelink.json
+C:\Users\danii\Desktop\ITransition_COURSE\task_4\TASK_4_CSHARP\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

@@ -15,6 +15,13 @@ namespace TASK_4_CSHARP
             builder.Services.AddDbContext<TaskFourContext>(opt =>
                 opt.UseNpgsql(builder.Configuration.GetConnectionString("TaskFourDbConnection")));
 
+            builder.Services.AddAuthentication("MyCookieAuth")
+                .AddCookie("CookieAuth", options =>
+                {
+                    options.Cookie.Name = "CookieAuth";
+                    options.LoginPath = "/Login";
+                });
+
             var app = builder.Build();
 
 
@@ -30,6 +37,8 @@ namespace TASK_4_CSHARP
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

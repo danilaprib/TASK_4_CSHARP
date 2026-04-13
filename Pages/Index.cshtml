@@ -25,7 +25,7 @@
         <thead class="table-light sticky-top">
             <tr>
                 <th>
-                    <input type="checkbox" />
+                    <input id="selectAll" type="checkbox" />
                 </th>
                 <th>Name</th>
                 <th>Email</th>
@@ -34,15 +34,28 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <input type="checkbox" />
-                </td>
-                <td>Jane Doe</td>
-                <td>jane.doe@email.com</td>
-                <td>Active</td>
-                <td>today</td>
-            </tr>
+            @foreach(var user in Model._users)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox" name="userCheckbox" value="@user.UserId"/>
+                    </td>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.Status</td>
+                    <td>(@user.LastLoginTime.ToString() ?? "-")</td>
+                </tr>
+            }
+
         </tbody>
     </table>
+
+    <script>
+        document.getElementById('selectAll').onclick = function() {
+            var checkboxes = document.getElementsByName('userCheckbox');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = this.checked;
+            }
+        }
+    </script>
 </div>

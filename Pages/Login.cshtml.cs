@@ -1,12 +1,47 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+using TASK_4_CSHARP.Data;
 
 namespace TASK_4_CSHARP.Pages
 {
     public class LoginModel : PageModel
     {
-        public void OnGet()
+        private readonly TaskFourContext _context;
+        public LoginModel(TaskFourContext context)
         {
+            _context = context;
+        }
+
+        public async Task<IActionResult> OnPost(string email, string password)
+        {
+            var user = _context.Users
+                .FirstOrDefault(u => u.Email == email && u.Password == password);
+
+            if (user != null && !user.IsBlocked)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.Email),
+                    new Claim("UserId", user.UserId.ToString()),
+                    new Claim("Status", user.Status)
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, "MyCookieAuth");
+
+                await HttpContext.SignInAsync("MyCookieAuth", new ClaimsPrincipal(claimsIdentity));
+
+                user.LastLoginTime = DateTime.UtcNow;
+                await _context.SaveChangesAsync();
+
+                return RedirectToPage("/Index");
+            }
+
+            ModelState.AddModelError("", "Invalid email/password or account blocked.");
+            return Page();
         }
     }
 }
