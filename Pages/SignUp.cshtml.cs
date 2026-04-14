@@ -34,8 +34,8 @@ namespace TASK_4_CSHARP.Pages
                 new Claim(ClaimTypes.Name, user.Email),
                 new Claim("UserId", user.UserId.ToString())
             };
-            var claimsIdentity = new ClaimsIdentity(claims, "MyCookieAuth");
-            await HttpContext.SignInAsync("MyCookieAuth", new ClaimsPrincipal(claimsIdentity));
+            var claimsIdentity = new ClaimsIdentity(claims, "CookieAuth");
+            await HttpContext.SignInAsync("CookieAuth", new ClaimsPrincipal(claimsIdentity));
 
             return RedirectToPage("Index");
         }
