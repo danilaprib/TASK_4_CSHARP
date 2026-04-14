@@ -15,9 +15,6 @@ namespace TASK_4_CSHARP.Pages
         {
             _context = context;
         }
-        public void OnGet(TaskFourContext context)
-        {
-        }
 
         public async Task<IActionResult> OnPost(string username, string email, string password)
         {

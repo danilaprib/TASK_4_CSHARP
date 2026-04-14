@@ -30,9 +30,9 @@ namespace TASK_4_CSHARP.Pages
                     new Claim("Status", user.Status)
                 };
 
-                var claimsIdentity = new ClaimsIdentity(claims, "MyCookieAuth");
+                var claimsIdentity = new ClaimsIdentity(claims, "CookieAuth");
 
-                await HttpContext.SignInAsync("MyCookieAuth", new ClaimsPrincipal(claimsIdentity));
+                await HttpContext.SignInAsync("CookieAuth", new ClaimsPrincipal(claimsIdentity));
 
                 user.LastLoginTime = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
