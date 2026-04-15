@@ -27,7 +27,7 @@ namespace TASK_4_CSHARP.Data
         [Column("is_blocked")]
         public bool IsBlocked { get; set; } = false;
 
-        [Column("is_blocked")]
+        [Column("is_verified")]
         public bool IsVerified { get; set; } = false;
 
         [Column("last_login_time")]
@@ -35,7 +35,7 @@ namespace TASK_4_CSHARP.Data
 
         [Column("registration_time")]
         public DateTime RegistrationTime { get; set; } = DateTime.UtcNow;
-
+            
         [Column("verification_token")]
         public string? VerificationToken { get; set; }
     }

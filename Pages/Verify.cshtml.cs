@@ -21,6 +21,7 @@ namespace TASK_4_CSHARP.Pages
             {
                 user.VerificationToken = null;
                 user.Status = "Active";
+                user.IsVerified = true;
                 await _context.SaveChangesAsync();
                 TempData["SuccessMessage"] = "Account verified. You are now active.";
             }
