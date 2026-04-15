@@ -17,15 +17,15 @@ namespace TASK_4_CSHARP.Pages
         {
             var user = _context.Users.FirstOrDefault(u => u.VerificationToken == token);
 
-            if (user != null)
+            if (user != null && !user.IsBlocked)
             {
                 user.VerificationToken = null;
                 user.Status = "Active";
                 await _context.SaveChangesAsync();
-                TempData["SuccessMessage"] = "Account verified! You are now active.";
+                TempData["SuccessMessage"] = "Account verified. You are now active.";
             }
 
-            return Page();
+            return RedirectToPage("Index");
         }
     }
 }

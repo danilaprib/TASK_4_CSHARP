@@ -44,6 +44,7 @@ namespace TASK_4_CSHARP.Pages
             var verificationLink = $"https://task-4-csharp.onrender.com/Verify?token={token}";
             await SendVerificationEmailAsync(email, verificationLink);
 
+            TempData["SuccessMessage"] = "You are signed up";
             return RedirectToPage("Index");
 
         }
