@@ -21,6 +21,7 @@ namespace TASK_4_CSHARP.Pages
 
             if (user == null)
             {
+                TempData["ErrorMessage"] = "Wrong email or password";
                 return Page();
             }
             if (!user.IsBlocked)
@@ -44,6 +45,7 @@ namespace TASK_4_CSHARP.Pages
                 return RedirectToPage("/Index");
             }
 
+            TempData["ErrorMessage"] = "User blocked";
             return Page();
         }
     }
