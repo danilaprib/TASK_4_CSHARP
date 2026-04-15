@@ -21,7 +21,11 @@ namespace TASK_4_CSHARP.Pages
             var user = _context.Users
                 .FirstOrDefault(u => u.Email == email && u.Password == password);
 
-            if (user != null && !user.IsBlocked)
+            if (user == null)
+            {
+                return Page();
+            }
+            if (!user.IsBlocked)
             {
                 var claims = new List<Claim>
                 {
@@ -37,11 +41,11 @@ namespace TASK_4_CSHARP.Pages
                 user.LastLoginTime = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
 
+                TempData["SuccessMessage"] = $"{user.Name ?? ""} logged in successfully";
+
                 return RedirectToPage("/Index");
             }
 
-            TempData["LoginSuccess"] = $"{user.Name ?? ""} logged in successfully";
-            ModelState.AddModelError("", "Invalid email/password or account blocked.");
             return Page();
         }
     }

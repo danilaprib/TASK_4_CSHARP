@@ -27,6 +27,9 @@ namespace TASK_4_CSHARP.Data
         [Column("is_blocked")]
         public bool IsBlocked { get; set; } = false;
 
+        [Column("is_blocked")]
+        public bool IsVerified { get; set; } = false;
+
         [Column("last_login_time")]
         public DateTime? LastLoginTime { get; set; }
 

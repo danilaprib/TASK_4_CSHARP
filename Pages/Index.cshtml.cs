@@ -52,7 +52,14 @@ namespace TASK_4_CSHARP.Pages
                 foreach (var user in users)
                 {
                     user.IsBlocked = false;
-                    user.Status = "Active";
+                    if (user.IsVerified)
+                    {
+                        user.Status = "Active";
+                    }
+                    else
+                    {
+                        user.Status = "Unverified";
+                    }
                 }
                 await _context.SaveChangesAsync();
             }
