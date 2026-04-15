@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|c:\\users\\danii\\desktop\\itransition_course\\task_4\\task_4_csharp\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|c:\\users\\danii\\desktop\\itransition_course\\task_4\\task_4_csharp\\pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|solutionrelative:pages\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|c:\\users\\danii\\desktop\\itransition_course\\task_4\\task_4_csharp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|c:\\users\\danii\\desktop\\itransition_course\\task_4\\task_4_csharp\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|solutionrelative:pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A38109E2-D0D7-46B1-99A2-78F6D0914E65}|TASK_4_CSHARP.csproj|c:\\users\\danii\\desktop\\itransition_course\\task_4\\task_4_csharp\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -136,15 +136,11 @@
         },
         {
           "DockedHeight": 439,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Data\\User.cs",
               "RelativeDocumentMoniker": "Data\\User.cs",
@@ -156,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
@@ -168,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Verify.cshtml",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Verify.cshtml",
               "RelativeDocumentMoniker": "Pages\\Verify.cshtml",
@@ -180,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Verify.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Verify.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Verify.cshtml.cs",
@@ -192,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TaskFourContext.cs",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Data\\TaskFourContext.cs",
               "RelativeDocumentMoniker": "Data\\TaskFourContext.cs",
@@ -210,27 +206,27 @@
               "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAArwB8AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADwAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-12T16:21:23.279Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Login.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Login.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Login.cshtml.cs",
               "ToolTip": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Login.cshtml.cs",
               "RelativeToolTip": "Pages\\Login.cshtml.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwC8AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBAAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-13T19:07:19.206Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "SignUp.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\SignUp.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\SignUp.cshtml.cs",
@@ -238,12 +234,28 @@
               "RelativeToolTip": "Pages\\SignUp.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-13T19:10:28.29Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-13T19:10:28.29Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Login.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Login.cshtml",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Login.cshtml",
+              "RelativeToolTip": "Pages\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-12T17:29:39.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -252,18 +264,6 @@
               "ViewState": "AgIAABkAAAAAAAAAAAArwDIAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-11T13:40:00.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Login.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Login.cshtml",
-              "ToolTip": "C:\\Users\\danii\\Desktop\\ITransition_COURSE\\task_4\\TASK_4_CSHARP\\Pages\\Login.cshtml",
-              "RelativeToolTip": "Pages\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-12T17:29:39.114Z"
             },
             {
               "$type": "Document",
