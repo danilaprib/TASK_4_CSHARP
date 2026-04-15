@@ -44,15 +44,14 @@
                     <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
                         <li class="nav-item">
                             <span class="navbar-text text-white">
-                                @if (Context.User.Identity.IsAuthenticated)
+                                @if (Context != null && Context.User.Identity.IsAuthenticated)
                                 {
-                                    <i class="fa-solid fa-user me-1"></i>
-                                    @User.Identity.Name
+                                    <i class="fa-solid fa-user me-1">@User.Identity.Name</i>                                    
                                 }
                             </span>
                         </li>
                         <li class="nav-item">
-                            @if (Context.User.Identity.IsAuthenticated)
+                            @if (Context != null && Context.User.Identity.IsAuthenticated)
                             {
                                 <a class="btn btn-outline-light btn-sm" asp-page="/Logout">Logout</a>
                             }

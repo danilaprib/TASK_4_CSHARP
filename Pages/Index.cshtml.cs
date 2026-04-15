@@ -19,7 +19,6 @@ namespace TASK_4_CSHARP.Pages
         public void OnGet()
         {
             _users = _context.Users.OrderByDescending(u => u.LastLoginTime).ToList();
-
         }
 
         public async Task<IActionResult> OnPostBlock(int[] selectedIds)

@@ -1,8 +1,6 @@
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using TASK_4_CSHARP.Data;
 
@@ -41,8 +39,8 @@ namespace TASK_4_CSHARP.Pages
                 user.LastLoginTime = DateTime.UtcNow;
                 await _context.SaveChangesAsync();
 
-                TempData["SuccessMessage"] = $"{user.Name ?? ""} logged in successfully";
-
+                TempData["SuccessMessage"] = $"Logged in successfully as {user.Name ?? ""}";
+    
                 return RedirectToPage("/Index");
             }
 

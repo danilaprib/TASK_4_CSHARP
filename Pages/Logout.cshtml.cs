@@ -8,6 +8,7 @@ namespace TASK_4_CSHARP.Pages
     {
         public async Task<IActionResult> OnGet()
         {
+            
             await HttpContext.SignOutAsync("CookieAuth");
             return RedirectToPage("Login");
         }
