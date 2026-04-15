@@ -4,58 +4,69 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="sticky- d-flex gap-3 mb-3">
-    <button class="btn btn-primary">
-        Block
-    </button>
-    <button class="btn btn-primary">
-        <i class="fas fa-unlock"></i>
-    </button>
-    <button class="btn btn-danger">
-        <i class="fas fa-trash-can"></i>
-    </button>
-    <button class="btn btn-danger">
-        <i class="fas fa-ban"></i>
-    </button>
-</div>
+<form method="post">
 
 
-<div class="table-responsive">
-    <table class="table">
-        <thead class="table-light sticky-top">
-            <tr>
-                <th>
-                    <input id="selectAll" type="checkbox" />
-                </th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Status</th>
-                <th>Last Seen</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var user in Model._users)
-            {
-                <tr>
-                    <td>
-                        <input type="checkbox" name="userCheckbox" value="@user.UserId"/>
-                    </td>
-                    <td>@user.Name</td>
-                    <td>@user.Email</td>
-                    <td>@user.Status</td>
-                    <td>(@user.LastLoginTime.ToString() ?? "NA")</td>
-                </tr>
-            }
-
-        </tbody>
-    </table>
-
-    <script>
-        document.getElementById('selectAll').onclick = function() {
-            var checkboxes = document.getElementsByName('userCheckbox');
-            for (var checkbox of checkboxes) {
-                checkbox.checked = this.checked;
-            }
+    <div>
+        @if(TempData["LoginSuccess"] != null)
+        {
+            <p>You are logged in</p>
         }
-    </script>
-</div>
+    </div>
+    <div>
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <p>Account verified. You are now active.</p>
+        }
+    </div>
+
+    <div class="sticky-top bg-white d-flex gap-3 mb-3 py-2">
+        <button type="submit" asp-page-handler="Block" class="btn btn-primary">
+            Block
+        </button>
+        <button type="submit" asp-page-handler="Unblock" class="btn btn-primary">
+            <i class="fas fa-unlock"></i>
+        </button>
+        <button type="submit" asp-page-handler="Delete" class="btn btn-danger">
+            <i class="fas fa-trash-can"></i>
+        </button>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="table-light">
+                <tr>
+                    <th><input id="selectAll" type="checkbox" /></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Last Seen</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model._users)
+                {
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="selectedIds" value="@user.UserId" />
+                        </td>
+                        <td>@user.Name</td>
+                        <td>@user.Email</td>
+                        <td>@user.Status</td>
+                        <td>@(user.LastLoginTime?.ToString() ?? "Never")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <script>
+            document.getElementById('selectAll').onclick = function() {
+                var checkboxes = document.getElementsByName('userCheckbox');
+                for (var checkbox of checkboxes) {
+                    checkbox.checked = this.checked;
+                }
+            }
+        </script>
+    </div>
+</form>
+

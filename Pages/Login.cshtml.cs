@@ -40,6 +40,7 @@ namespace TASK_4_CSHARP.Pages
                 return RedirectToPage("/Index");
             }
 
+            TempData["LoginSuccess"] = $"{user.Name ?? ""} logged in successfully";
             ModelState.AddModelError("", "Invalid email/password or account blocked.");
             return Page();
         }

@@ -32,5 +32,8 @@ namespace TASK_4_CSHARP.Data
 
         [Column("registration_time")]
         public DateTime RegistrationTime { get; set; } = DateTime.UtcNow;
+
+        [Column("verification_token")]
+        public string? VerificationToken { get; set; }
     }
 }
