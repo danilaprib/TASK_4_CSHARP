@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TASK_4_CSHARP.Data;
@@ -11,9 +12,11 @@ using TASK_4_CSHARP.Data;
 namespace TASK_4_CSHARP.Migrations
 {
     [DbContext(typeof(TaskFourContext))]
-    partial class TaskFourContextModelSnapshot : ModelSnapshot
+    [Migration("20260415064529_VerifyToken")]
+    partial class VerifyToken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
